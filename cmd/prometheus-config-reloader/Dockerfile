@@ -1,6 +1,6 @@
-ARG ARCH="amd64"
+ARG ARCH="arm"
 ARG OS="linux"
-FROM quay.io/prometheus/busybox-${OS}-${ARCH}:latest
+FROM busybox:1.31.1-uclibc
 
 ADD prometheus-config-reloader /bin/prometheus-config-reloader
 

@@ -1,11 +1,11 @@
 SHELL=/bin/bash -o pipefail
 
 OS?=linux
-ARCH?=amd64
+ARCH?=arm
 
 GO_PKG=github.com/coreos/prometheus-operator
-REPO?=quay.io/coreos/prometheus-operator
-REPO_PROMETHEUS_CONFIG_RELOADER?=quay.io/coreos/prometheus-config-reloader
+REPO?=docker.io/samlockart/prometheus-operator
+REPO_PROMETHEUS_CONFIG_RELOADER?=docker.io/samlockart/prometheus-config-reloader
 REPO_PROMETHEUS_OPERATOR_LINT?=quay.io/coreos/prometheus-operator-lint
 TAG?=$(shell git rev-parse --short HEAD)
 VERSION?=$(shell cat VERSION | tr -d " \t\n\r")
